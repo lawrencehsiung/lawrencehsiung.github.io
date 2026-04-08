@@ -4,36 +4,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Film Photography | Your Name</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
 </head>
 
 <body>
   <header>
     <h1>Film Photography</h1>
-    <p>35mm • Medium Format • Experimental</p>
 
     <nav>
       <a href="index.html">Home</a>
-      <a href="photography.html">Film Photography</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="mailto:ljhlucidshowcars@gmail.com">Contact</a>
     </nav>
+    
+    <p>Current Cameras: Pentax MX, Olympus XA </p>
+    <p>Retired Cameras: Kodak H35, Olympus TripAF31 </p>
+
+
+    <!-- Instagram Icon -->
+    <div class="social-icons">
+      <a href="https://instagram.com/film.foto.lan" target="_blank">
+        <img src="icons/instagram-white-icon.png" alt="Instagram" loading="lazy" decoding="async" fetchpriority="low" />
+      </a>
+    </div>
   </header>
 
   <section>
-    <h2>Gallery</h2>
+    <h2>Instagram Feed</h2>
 
-    <div class="photo">
-      <img src="photos/photo1.jpg" alt="Film photo 1" />
-      <p>Optional caption or camera/film info.</p>
+    <!-- Replace this block with your real LightWidget embed -->
+    <div class="instagram-feed">
+      <script src="https://cdn.lightwidget.com/widgets/YOUR_WIDGET.js"></script>
+      <iframe src="https://cdn.lightwidget.com/widgets/YOUR_WIDGET.html"
+        scrolling="no"
+        allowtransparency="true"
+        class="lightwidget-widget">
+      </iframe>
     </div>
+  </section>
 
-    <div class="photo">
-      <img src="photos/photo2.jpg" alt="Film photo 2" />
-      <p>Optional caption.</p>
-    </div>
-
-    <div class="photo">
-      <img src="photos/photo3.jpg" alt="Film photo 3" />
-      <p>Optional caption.</p>
-    </div>
-
-    <!-- Add more photos as needed -->
+  <footer>
+    © 2026 Lawrence Hsiung
+  </footer>
+</body>
+</html>
