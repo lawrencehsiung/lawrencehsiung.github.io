@@ -14,7 +14,7 @@ body {
 /* Film aesthetic gradient */
 body {
   background: linear-gradient(120deg, #0b0b0b, #2a1f1a, #3a2a4a, #1a2a2f);
-  background-size: 400% 400%;
+  background-size: 600% 600%;
   animation: filmAmbient 28s linear infinite;
 }
 
