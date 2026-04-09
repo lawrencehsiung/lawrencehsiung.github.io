@@ -255,13 +255,6 @@ nav {
   animation: exitRight 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.page-enter-from-right {
-  animation: enterFromRight 0.55s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.page-enter-from-left {
-  animation: enterFromLeft 0.55s cubic-bezier(0.16, 1, 0.3, 1);
-}
 
 @keyframes exitLeft {
   from {
@@ -282,28 +275,6 @@ nav {
   to {
     opacity: 0;
     transform: translateX(60px);
-  }
-}
-
-@keyframes enterFromRight {
-  from {
-    opacity: 0;
-    transform: translateX(60px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes enterFromLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-60px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
   }
 }
 
