@@ -1,126 +1,143 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lawrence Hsiung | Systems & Electrical Engineer</title>
-  <meta name="description" content="Lawrence Hsiung - Multidisciplinary Systems & Electrical Engineer with a passion for design, hardware integration, and film photography." />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Lawrence Hsiung is a multidisciplinary systems and electrical engineer with a passion for design and film photography.">
+  <script>try{var t=localStorage.getItem('lh-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <header>
-    <img src="images/me.jpeg" alt="Lawrence Hsiung" class="profile-pic" />
-    <h1 class="title">Lawrence Hsiung</h1>
-
-    <nav aria-label="Main Navigation">
-
-      <!-- Home -->
-      <a href="index.html" class="nav-icon" data-label="Home" aria-label="Home">
-        <svg viewBox="0 0 24 24" class="icon" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M3 9.5L12 3l9 6.5" fill="none" stroke="currentColor"/>
-          <path d="M5 10v10h5v-6h4v6h5V10" fill="none" stroke="currentColor"/>
-        </svg>
-      </a>
-
-      <!-- Portfolio -->
-      <a href="portfolio.html" class="nav-icon" data-label="Portfolio" aria-label="Portfolio">
-        <svg viewBox="0 0 24 24" class="icon" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <rect x="4" y="5" width="16" height="14" rx="2" ry="2" fill="none" stroke="currentColor"/>
-          <path d="M9 5V3h6v2" fill="none" stroke="currentColor"/>
-        </svg>
-      </a>
-
-      <!-- LinkedIn -->
-      <a href="https://linkedin.com/in/lhsiung" class="nav-icon" data-label="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" class="icon" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor"/>
-          <line x1="8" y1="10" x2="8" y2="16" stroke="currentColor"/>
-          <circle cx="8" cy="7" r="1" fill="none" stroke="currentColor"/>
-          <path d="M12 16v-4c0-1.5 3-1.6 3 0v4" fill="none" stroke="currentColor"/>
-        </svg>
-      </a>
-
-      <!-- Film Photography -->
-      <a href="https://instagram.com/film.foto.lan" class="nav-icon" data-label="Film Photography" aria-label="Film Photography" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" class="icon" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M7 7l2-3h6l2 3" fill="none" stroke="currentColor"/>
-          <rect x="3" y="7" width="18" height="12" rx="2" fill="none" stroke="currentColor"/>
-          <circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor"/>
-        </svg>
-      </a>
-
-      <!-- Contact -->
-      <a href="mailto:ljhlucidshowcars@gmail.com" class="nav-icon" data-label="Contact" aria-label="Contact">
-        <svg viewBox="0 0 24 24" class="icon" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <rect x="3" y="5" width="18" height="14" rx="2" ry="2" fill="none" stroke="currentColor"/>
-          <path d="M4 7l8 6 8-6" fill="none" stroke="currentColor"/>
-        </svg>
-      </a>
-
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="mark" aria-hidden="true"><i class="circle bg-coral"></i><i class="bg-sky"></i><i class="tri bg-butter"></i></span>
+      Lawrence Hsiung
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="portfolio.html">Work</a>
+      <a href="https://instagram.com/film.foto.lan" target="_blank" rel="noopener">Photos ↗</a>
+      <a href="Lawrence_Hsiung_Resume.pdf" class="hide-sm">Résumé</a>
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode"><span></span></button>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
+<main>
+  <section class="wrap hero">
+    <div>
+      <p class="label">Systems &amp; Electrical Engineer</p>
+      <h1>Hey, I'm <b>Lawrence</b> <span class="wave" aria-hidden="true">👋</span></h1>
+      <p class="lede">A multidisciplinary engineer with a passion for design aesthetics and film photography.</p>
+      <div class="pill"><i class="circle bg-sage" aria-hidden="true"></i><span>Now: <strong>Member of Technical Staff</strong> at Everpure</span></div>
+    </div>
 
-    <section class="intro">
-      <h2>Hey, I'm Lawrence! 👋</h2>
+    <figure class="hero-photo"><img src="images/me.jpeg" alt="Lawrence Hsiung behind the wheel"></figure>
+  </section>
 
-      <p>
-        I'm a multidisciplinary engineer with a passion for design and film photography.
-      </p>
+  <section class="section" id="about">
+    <div class="wrap two-col">
+      <div>
+        <p class="label sq">About</p>
+        <div class="shapes" aria-hidden="true"><i class="circle bg-coral"></i><i class="bg-butter"></i><i class="half-top bg-sky"></i><i class="tri bg-sage"></i></div>
+      </div>
+      <div class="prose rise">
+        <p>I love building things that solve problems and tell stories. My favorite past projects include architecting the electrical systems for the Lucid Cosmos and Earth and testing hardware for the Farmwise Vulcan weeding robot.</p>
+        <p>I'm a big coffee enjoyer, occasional gamer, and dabbler in many hobbies.</p>
+        <div class="edu">
+          <div><i class="circle bg-coral" aria-hidden="true"></i><span class="yr">2021</span><strong>San José State University</strong><span class="d">M.S. Electrical Engineering, focused on machine learning &amp; power systems</span></div>
+          <div><i class="bg-sky" aria-hidden="true"></i><span class="yr">2018</span><strong>UC San Diego</strong><span class="d">B.S. Electrical Engineering, minor in Business Studies</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <p>
-        I love building things that solve problems and tell stories. Some of my favorite professional projects include 
-        architecting and integrating the electrical systems for the upcoming Lucid Cosmos and Earth show cars, 
-        designing and executing hardware tests for the Farmwise Vulcan autonomous smart weeding robot, certifying consumer audio hardware at Zoom, 
-        and validating hardware for the Versa Series at Fitbit. 
-      </p>
+  <section class="section" id="off-the-clock">
+    <div class="wrap">
+      <p class="label ytri">Off the clock</p>
+      <div class="cards rise">
+        <a class="card bg-coral" href="coffee.html"><i class="deco circle" aria-hidden="true"></i><h3>Coffee recipes</h3></a>
+        <a class="card bg-butter" href="badminton.html"><i class="deco" aria-hidden="true"></i><h3>Badminton</h3></a>
+        <a class="card bg-sky" href="dailies.html"><i class="deco tri" aria-hidden="true"></i><h3>Dailies</h3></a>
+      </div>
+    </div>
+  </section>
 
-      <p>
-        I graduated from UC San Diego in 2018 with a B.S. in Electrical Engineering and a minor in Business Studies, 
-        and from San Jose State University in 2021 with an M.S. in Electrical Engineering 
-        focusing on machine learning and power systems.
-      </p>
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="contact-block simple rise">
+        <div class="btns">
+            <a class="btn primary" href="mailto:ljhlucidshowcars@gmail.com">Say hello</a>
+            <a class="btn" href="https://linkedin.com/in/lhsiung" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a class="btn" href="Lawrence_Hsiung_Resume.pdf">Résumé (PDF)</a>
+          </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-      <p>
-        In my free time, I like to explore new coffee recipes ☕, play badminton 🏸, 
-        or complete the daily crossword ✏️! I love talking about the latest in wearable tech, sustainable transportation, and consumer electronics.
-      </p>
-    </section>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Lawrence Hsiung</span>
+    <span class="mark" aria-hidden="true"><i class="circle bg-coral"></i><i class="bg-sky"></i><i class="tri bg-butter"></i></span>
+  </div>
+</footer>
 
-    <section class="resume">
-      <h2>Résumé</h2>
-      <p><strong>Current Role:</strong> Prototypes and Concepts Systems Engineer @ Lucid Motors</p>
-      <p><a href="Lawrence_Hsiung_Resume.pdf" class="resume-link" target="_blank" rel="noopener noreferrer">Download Résumé (PDF)</a></p>
-    </section>
-
-  </main>
-
-  <footer>
-    © 2026 Lawrence Hsiung
-  </footer>
-
-  <script>
-    document.querySelectorAll('a').forEach(link => {
-      if (link.href.includes("portfolio.html")) {
-        link.addEventListener("click", function (e) {
-          if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
-          e.preventDefault();
-
-          /* Force instant animation start */
-          void document.body.offsetWidth;
-
-          document.body.classList.add("page-exit-left");
-
-          setTimeout(() => {
-            window.location = this.href;
-          }, 550);
-        });
-      }
+<script>
+// Light / dark toggle, remembered per visitor
+(function () {
+  const root = document.documentElement;
+  const btn = document.querySelector('.theme-toggle');
+  const isDark = () => root.dataset.theme
+    ? root.dataset.theme === 'dark'
+    : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const sync = () => btn && btn.setAttribute('aria-pressed', String(isDark()));
+  if (btn) {
+    btn.addEventListener('click', () => {
+      root.dataset.theme = isDark() ? 'light' : 'dark';
+      try { localStorage.setItem('lh-theme', root.dataset.theme); } catch (e) {}
+      sync();
     });
-  </script>
+  }
+  sync();
+})();
 
+// Gentle reveal on scroll
+(function () {
+  const els = document.querySelectorAll('.rise');
+  if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in')); return; }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(e => io.observe(e));
+})();
+
+// Lightbox for portfolio images
+(function () {
+  const dlg = document.querySelector('dialog.viewer');
+  if (!dlg) return;
+  const img = dlg.querySelector('img');
+  const cap = dlg.querySelector('.cap');
+  document.querySelectorAll('[data-view]').forEach(b => {
+    b.addEventListener('click', () => {
+      const src = b.querySelector('img');
+      img.src = src.src;
+      img.alt = src.alt;
+      cap.textContent = b.dataset.view;
+      dlg.showModal();
+    });
+  });
+  dlg.addEventListener('click', (e) => {
+    if (e.target === dlg || e.target.closest('.close')) dlg.close();
+  });
+})();
+</script>
 </body>
 </html>

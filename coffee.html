@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coffee Recipes | Lawrence Hsiung</title>
+  <meta name="description" content="Lawrence Hsiung's favorite coffee recipes, with ratios, grind and steps.">
+  <script>try{var t=localStorage.getItem('lh-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="mark" aria-hidden="true"><i class="circle bg-coral"></i><i class="bg-sky"></i><i class="tri bg-butter"></i></span>
+      Lawrence Hsiung
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="portfolio.html">Work</a>
+      <a href="https://instagram.com/film.foto.lan" target="_blank" rel="noopener">Photos ↗</a>
+      <a href="Lawrence_Hsiung_Resume.pdf" class="hide-sm">Résumé</a>
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode"><span></span></button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <a class="back" href="index.html#off-the-clock"><span aria-hidden="true">←</span>Back home</a>
+
+    <section class="sub-hero bg-coral">
+      <div>
+        <p class="label plain" style="color:inherit">Off the clock · 01</p>
+        <h1>Coffee <b>recipes.</b></h1>
+      </div>
+    </section>
+  </div>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head"><div><h2>House favorites</h2></div></div>
+      <div class="recipes rise">
+
+        <article class="recipe">
+          <header class="recipe-head bg-sky"><div><span class="kind">Iced pour-over · James Hoffmann inspired</span><h3>Iced V60</h3></div><i class="circle" aria-hidden="true"></i></header>
+          <dl class="specs">
+            <div><dt>Coffee</dt><dd>16 g</dd></div>
+            <div><dt>Hot water</dt><dd>150 g</dd></div>
+            <div><dt>Ice</dt><dd>100 g</dd></div>
+            <div><dt>Time</dt><dd>~2:30</dd></div>
+          </dl>
+          <ol class="steps">
+            <li>Put 100 g of ice in the server and grind a little finer than you would for hot V60.</li>
+            <li>Bloom with about 35 g of water, swirl, and wait 45 seconds.</li>
+            <li>Pour slowly and steadily up to 150 g.</li>
+            <li>Swirl and let it draw down, then swirl the server until the ice melts. Serve over fresh ice.</li>
+          </ol>
+          <p class="note"><b>My tweak:</b> a drop or two of salt water if it tastes bitter or flat.</p>
+        </article>
+
+        <article class="recipe">
+          <header class="recipe-head bg-sage"><div><span class="kind">Immersion pour-over · Deepak Talwar inspired</span><h3>Clever Dripper</h3></div><i class="half-top" aria-hidden="true"></i></header>
+          <dl class="specs">
+            <div><dt>Coffee</dt><dd>16 g</dd></div>
+            <div><dt>Water</dt><dd>250 g</dd></div>
+            <div><dt>Grind</dt><dd>Medium</dd></div>
+            <div><dt>Time</dt><dd>~3:30</dd></div>
+          </dl>
+          <ol class="steps">
+            <li>Pour 250 g of just-off-boil water into the Clever first.</li>
+            <li>Add the coffee and stir gently until all the grounds are wet.</li>
+            <li>Steep for 2 minutes, then stir to break the crust.</li>
+            <li>Wait 30 seconds, then set it on your cup and let it drain.</li>
+          </ol>
+        </article>
+
+        <article class="recipe">
+          <header class="recipe-head bg-butter"><div><span class="kind">Iced · We have Philz Honey Haze at home</span><h3>Honey haze</h3></div><i class="tri" aria-hidden="true"></i></header>
+          <dl class="specs">
+            <div><dt>Base</dt><dd>Pour-over</dd></div>
+            <div><dt>Honey</dt><dd>1 tsp</dd></div>
+            <div><dt>Milk</dt><dd>A splash</dd></div>
+            <div><dt>Serve</dt><dd>Chilled</dd></div>
+          </dl>
+          <ol class="steps">
+            <li>Brew a pour-over and chill it.</li>
+            <li>Dissolve 1 tsp of honey in a little hot water and stir it into the coffee.</li>
+            <li>Pour over ice and top with a little frothed milk.</li>
+            <li>Finish with a drizzle of honey.</li>
+          </ol>
+        </article>
+
+        <article class="recipe">
+          <header class="recipe-head bg-coral"><div><span class="kind">Espresso · on the La Marzocco at work</span><h3>Classic latte</h3></div><i aria-hidden="true"></i></header>
+          <dl class="specs">
+            <div><dt>Dose</dt><dd>18 g</dd></div>
+            <div><dt>Yield</dt><dd>36 g</dd></div>
+            <div><dt>Shot</dt><dd>25–30 s</dd></div>
+            <div><dt>Milk</dt><dd>~180 ml</dd></div>
+          </dl>
+          <ol class="steps">
+            <li>Pull a double shot: 18 g in, 36 g out, in 25 to 30 seconds.</li>
+            <li>Steam milk to about 60 °C with a thin layer of silky microfoam.</li>
+            <li>Tap and swirl the pitcher, then pour into the center of the shot.</li>
+          </ol>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head"><div><h2>Brew ratio calculator</h2></div></div>
+      <form class="calc rise" onsubmit="return false">
+        <div>
+          <label for="dose">Coffee (g)</label>
+          <input id="dose" type="number" inputmode="decimal" min="1" max="200" step="0.5" value="15">
+        </div>
+        <div>
+          <label for="ratio">Ratio</label>
+          <select id="ratio">
+            <option value="2">1:2 · espresso</option>
+            <option value="5">1:5 · cold brew</option>
+            <option value="15">1:15 · strong</option>
+            <option value="16.67" selected>1:16.7 · classic</option>
+            <option value="17">1:17 · lighter</option>
+          </select>
+        </div>
+        <div class="out" aria-live="polite"><b id="water">250 g</b><span>water to use</span></div>
+        <div class="out temp" aria-live="polite"><b id="temp">92–96 °C</b><span id="temp-f">197–205 °F · water temp</span></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Lawrence Hsiung</span>
+    <span class="mark" aria-hidden="true"><i class="circle bg-coral"></i><i class="bg-sky"></i><i class="tri bg-butter"></i></span>
+  </div>
+</footer>
+
+<script>
+// Light / dark toggle, remembered per visitor
+(function () {
+  const root = document.documentElement;
+  const btn = document.querySelector('.theme-toggle');
+  const isDark = () => root.dataset.theme
+    ? root.dataset.theme === 'dark'
+    : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const sync = () => btn && btn.setAttribute('aria-pressed', String(isDark()));
+  if (btn) {
+    btn.addEventListener('click', () => {
+      root.dataset.theme = isDark() ? 'light' : 'dark';
+      try { localStorage.setItem('lh-theme', root.dataset.theme); } catch (e) {}
+      sync();
+    });
+  }
+  sync();
+})();
+
+// Gentle reveal on scroll
+(function () {
+  const els = document.querySelectorAll('.rise');
+  if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in')); return; }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(e => io.observe(e));
+})();
+
+// Lightbox for portfolio images
+(function () {
+  const dlg = document.querySelector('dialog.viewer');
+  if (!dlg) return;
+  const img = dlg.querySelector('img');
+  const cap = dlg.querySelector('.cap');
+  document.querySelectorAll('[data-view]').forEach(b => {
+    b.addEventListener('click', () => {
+      const src = b.querySelector('img');
+      img.src = src.src;
+      img.alt = src.alt;
+      cap.textContent = b.dataset.view;
+      dlg.showModal();
+    });
+  });
+  dlg.addEventListener('click', (e) => {
+    if (e.target === dlg || e.target.closest('.close')) dlg.close();
+  });
+})();
+</script>
+<script>
+  (function () {
+    const dose = document.getElementById('dose');
+    const ratio = document.getElementById('ratio');
+    const out = document.getElementById('water');
+    const tempEl = document.getElementById('temp');
+    const tempF = document.getElementById('temp-f');
+    // Recommended water temperature for each brew style
+    const TEMPS = {
+      '2':     ['90–94 °C', '194–201 °F'],   // espresso
+      '5':     ['Cold', 'fridge or room temp', true], // cold brew concentrate
+      '15':    ['92–96 °C', '197–205 °F'],   // pour-over
+      '16.67': ['92–96 °C', '197–205 °F'],
+      '17':    ['92–96 °C', '197–205 °F'],
+    };
+    const calc = () => {
+      const g = parseFloat(dose.value) || 0;
+      out.textContent = Math.round(g * parseFloat(ratio.value)) + ' g';
+      const t = TEMPS[ratio.value] || TEMPS['16.67'];
+      tempEl.textContent = t[0];
+      tempF.textContent = t[2] ? t[1] : t[1] + ' · water temp';
+    };
+    dose.addEventListener('input', calc);
+    ratio.addEventListener('change', calc);
+    calc();
+  })();
+</script>
+</body>
+</html>
