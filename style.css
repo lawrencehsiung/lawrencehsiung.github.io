@@ -113,7 +113,7 @@ a { color: inherit; }
 }
 .nav a { white-space: nowrap; text-decoration: none; color: var(--ink-soft); padding-block: 4px; position: relative; }
 .nav a:hover, .nav a[aria-current="page"] { color: var(--ink); }
-.nav a[aria-current="page"]::after {
+.nav a[aria-current="page"]::before {
   content: ""; position: absolute; left: 50%; bottom: -6px;
   width: 6px; height: 6px; border-radius: 50%; background: var(--coral);
   transform: translateX(-50%);
@@ -268,7 +268,7 @@ a.card:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
 
 .company { padding-block: clamp(28px, 5vw, 56px); scroll-margin-top: 80px; }
 .company-band {
-  display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center;
+  display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center;
   padding: 24px 28px; color: var(--on-pastel); margin-bottom: 18px;
 }
 .company-band .badge { width: 64px; height: 64px; background: var(--on-pastel); display: grid; place-items: center; color: #fff; font-weight: 600; font-size: 1.1rem; }
@@ -276,7 +276,7 @@ a.card:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
 .company-band .role { display: block; font-size: clamp(1rem, 1.5vw, 1.2rem); font-weight: 400; letter-spacing: 0; opacity: .85; margin-top: 4px; }
 .company-band .meta { font-size: .8rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
 @media (max-width: 640px) {
-  .company-band { grid-template-columns: auto 1fr; padding: 20px; gap: 16px; }
+  .company-band { grid-template-columns: 1fr; padding: 20px; gap: 8px; }
   .company-band .meta { grid-column: 1 / -1; }
   .company-band .badge { width: 48px; height: 48px; }
 }
@@ -292,7 +292,6 @@ a.card:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
 .shot .img { aspect-ratio: 4 / 3; overflow: hidden; background: var(--bg); }
 .shot img { width: 100%; height: 100%; object-fit: cover; }
 .shot .cap { display: flex; justify-content: space-between; gap: 12px; padding: 14px 16px; font-size: 1rem; font-weight: 500; }
-.shot .cap span:last-child { color: var(--ink-soft); font-size: .85rem; font-weight: 600; letter-spacing: .1em; }
 
 /* Lightbox */
 dialog.viewer { border: 0; padding: 0; background: transparent; max-width: min(1100px, 94vw); max-height: 92vh; }
@@ -416,7 +415,7 @@ dialog.viewer .close:hover { background: var(--butter); color: var(--on-pastel);
 .game:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
 .game .deco { position: absolute; top: -30px; right: -30px; width: 150px; height: 150px; background: rgba(255,255,255,.45); display: block; }
 .game .num { font-size: .85rem; font-weight: 600; letter-spacing: .14em; position: relative; }
-.game h3 { font-size: 1.9rem; margin: 10px 0 22px; position: relative; }
+.game h3 { font-size: 1.9rem; margin: 0 0 22px; position: relative; }
 .game p { margin: 0 0 22px; font-size: 1rem; opacity: .85; position: relative; }
 .game .play {
   margin-top: auto; align-self: start; position: relative;
@@ -439,3 +438,19 @@ dialog.viewer .close:hover { background: var(--butter); color: var(--on-pastel);
 .label.ytri::before { border-radius: 0; background: var(--butter); clip-path: polygon(50% 0, 100% 100%, 0 100%); }
 .kit li a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--coral); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 .kit li a:hover { text-decoration-color: var(--ink); }
+
+.btn.icon { padding: 0; width: 50px; height: 50px; display: inline-grid; place-items: center; }
+.btn.icon svg { display: block; }
+
+.nav a.with-icon { display: inline-grid; place-items: center; position: relative; width: 40px; height: 40px; padding: 0; }
+.nav a.with-icon .ig { display: block; width: 26px; height: 26px; }
+.nav a[data-tip]::after {
+  content: attr(data-tip);
+  position: absolute; top: calc(100% + 10px); left: 50%;
+  transform: translate(-50%, -4px);
+  background: var(--ink); color: var(--bg);
+  font-size: .8rem; font-weight: 500; letter-spacing: 0; white-space: nowrap;
+  padding: 6px 10px; border-radius: 8px;
+  opacity: 0; pointer-events: none; transition: opacity .15s, transform .15s;
+}
+.nav a[data-tip]:hover::after, .nav a[data-tip]:focus-visible::after { opacity: 1; transform: translate(-50%, 0); }

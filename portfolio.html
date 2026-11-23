@@ -1,245 +1,170 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Lawrence Hsiung</title>
-    <meta name="description" content="Engineering portfolio of Lawrence Hsiung - Prototypes, Autonomous Robotics, and Consumer Electronics." />
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio | Lawrence Hsiung</title>
+  <meta name="description" content="Selected engineering work by Lawrence Hsiung at Lucid Motors, Farmwise, Zoom and Fitbit.">
+  <script>try{var t=localStorage.getItem('lh-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  <body>
-    <header>
-      <h1>Portfolio</h1>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="mark" aria-hidden="true"><i class="circle bg-coral"></i><i class="bg-sky"></i><i class="tri bg-butter"></i></span>
+      Lawrence Hsiung
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a class="with-icon" href="portfolio.html" aria-current="page" aria-label="Selected Works" data-tip="Selected Works"><svg class="ig" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v17"/><path d="M15 9h3a1 1 0 0 1 1 1v11"/><path d="M8.5 7h3M8.5 11h3M8.5 15h3"/></svg></a>
+      <a class="with-icon" href="https://instagram.com/film.foto.lan" target="_blank" rel="noopener" aria-label="Film Photography" data-tip="Film Photography"><svg class="ig" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"/></svg></a>
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode"><span></span></button>
+    </nav>
+  </div>
+</header>
 
-      <nav class="top-icons" aria-label="Main Navigation">
-        <!-- Home -->
-        <a
-          href="index.html"
-          class="icon-link"
-          data-label="Home"
-          aria-label="Home"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <path d="M3 9.5L12 3l9 6.5" fill="none" stroke="currentColor" />
-            <path
-              d="M5 10v10h5v-6h4v6h5V10"
-              fill="none"
-              stroke="currentColor"
-            />
-          </svg>
-        </a>
+<main>
+  <section class="wrap page-intro">
+    <div>
+      <p class="label sq">Portfolio</p>
+      <h1>Selected works.</h1>
+    </div>
+    <div class="bar" aria-hidden="true"><i class="circle bg-coral"></i><i class="tri bg-sage"></i><i class="bg-sky"></i><i class="half-top bg-butter"></i></div>
+  </section>
 
-        <!-- LinkedIn -->
-        <a
-          href="https://linkedin.com/in/lhsiung"
-          class="icon-link"
-          data-label="LinkedIn"
-          aria-label="LinkedIn"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <rect
-              x="3"
-              y="3"
-              width="18"
-              height="18"
-              rx="2"
-              fill="none"
-              stroke="currentColor"
-            />
-            <line x1="8" y1="10" x2="8" y2="16" stroke="currentColor" />
-            <circle cx="8" cy="7" r="1" fill="none" stroke="currentColor" />
-            <path
-              d="M12 16v-4c0-1.5 3-1.6 3 0v4"
-              fill="none"
-              stroke="currentColor"
-            />
-          </svg>
-        </a>
+  <article class="company" id="lucid">
+    <div class="wrap">
+      <header class="company-band bg-coral">
+        <h2>Lucid Motors<span class="role">Prototypes &amp; Concepts Systems Engineer</span></h2>
+        <span class="meta">EVs</span>
+      </header>
+      <div class="gallery rise">
+        <button class="shot" type="button" data-view="Lucid Cosmos & Earth Concept"><div class="img"><img src="images/cosmosint.avif" alt="Lucid Cosmos & Earth Concept" loading="lazy"></div><div class="cap"><span>Cosmos &amp; Earth Concept</span></div></button>
+        <button class="shot" type="button" data-view="Lunar Robotaxi Concept"><div class="img"><img src="images/lucidlunar.png" alt="Lucid Lunar Robotaxi Concept" loading="lazy"></div><div class="cap"><span>Lunar Robotaxi Concept</span></div></button>
+        <button class="shot" type="button" data-view="Lucid Gravity x Uber x Nuro Robotaxi Concept"><div class="img"><img src="images/ubergravity.avif" alt="Lucid Gravity x Uber x Nuro Robotaxi Concept" loading="lazy"></div><div class="cap"><span>Gravity × Uber × Nuro Robotaxi</span></div></button>
+      </div>
+    </div>
+  </article>
 
-        <!-- Film Photography -->
-        <a
-          href="https://instagram.com/film.foto.lan"
-          class="icon-link"
-          data-label="Film Photography"
-          aria-label="Film Photography"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <path d="M7 7l2-3h6l2 3" fill="none" stroke="currentColor" />
-            <rect x="3" y="7" width="18" height="12" rx="2" fill="none" stroke="currentColor" />
-            <circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" />
-          </svg>
-        </a>
+  <article class="company" id="farmwise">
+    <div class="wrap">
+      <header class="company-band bg-sage">
+        <h2>Farmwise Labs<span class="role">Product &amp; Systems Engineer</span></h2>
+        <span class="meta">Ag robotics</span>
+      </header>
+      <div class="gallery rise">
+        <button class="shot" type="button" data-view="Vulcan Smart Weeding Robot"><div class="img"><img src="images/farmwisevulcan.jpg" alt="Farmwise Vulcan smart weeding robot" loading="lazy"></div><div class="cap"><span>Vulcan Smart Weeding Robot</span></div></button>
+        <button class="shot" type="button" data-view="IPS Box"><div class="img"><img src="images/ipsbox.png" alt="Farmwise IPS Box" loading="lazy"></div><div class="cap"><span>IPS Box</span></div></button>
+      </div>
+    </div>
+  </article>
 
-        <!-- Résumé -->
-        <a
-          href="Lawrence_Hsiung_Resume.pdf"
-          class="icon-link"
-          data-label="Résumé"
-          aria-label="Résumé"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <path d="M6 2h9l5 5v15H6z" fill="none" stroke="currentColor" />
-            <path d="M14 2v5h5" fill="none" stroke="currentColor" />
-            <line x1="9" y1="13" x2="15" y2="13" stroke="currentColor" />
-            <line x1="9" y1="17" x2="15" y2="17" stroke="currentColor" />
-          </svg>
-        </a>
+  <article class="company" id="zoom">
+    <div class="wrap">
+      <header class="company-band bg-sky">
+        <h2>Zoom<span class="role">Audio Test Engineer</span></h2>
+        <span class="meta">Consumer audio</span>
+      </header>
+      <div class="gallery rise">
+        <button class="shot" type="button" data-view="Zoom Hardware Certification"><div class="img"><img src="images/zcert3.webp" alt="Zoom hardware certification" loading="lazy"></div><div class="cap"><span>Hardware Certification</span></div></button>
+      </div>
+    </div>
+  </article>
 
-        <!-- Contact -->
-        <a
-          href="mailto:ljhlucidshowcars@gmail.com"
-          class="icon-link"
-          data-label="Contact"
-          aria-label="Contact"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" />
-            <path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" />
-          </svg>
-        </a>
-      </nav>
-    </header>
+  <article class="company" id="fitbit">
+    <div class="wrap">
+      <header class="company-band bg-butter">
+        <h2>Fitbit<span class="role">Electrical Engineering Technician</span></h2>
+        <span class="meta">Wearables</span>
+      </header>
+      <div class="gallery rise">
+        <button class="shot" type="button" data-view="Fitbit Versa 1, 2 & 3 Validation Testing"><div class="img"><img src="images/versa2.jpg" alt="Fitbit Versa validation testing" loading="lazy"></div><div class="cap"><span>Versa 1, 2 &amp; 3 Validation Testing</span></div></button>
+        <button class="shot" type="button" data-view="Fitbit Inspire HR & Inspire Validation Testing"><div class="img"><img src="images/inspirehr.webp" alt="Fitbit Inspire HR validation testing" loading="lazy"></div><div class="cap"><span>Inspire HR &amp; Inspire Validation Testing</span></div></button>
+      </div>
+    </div>
+  </article>
 
-    <main>
-      <section id="companies">
-        <article class="company">
-          <div class="company-header">
-            <img
-              src="images/lucidlogo.png"
-              alt="Lucid Motors logo"
-              class="company-logo invert-logo"
-            />
-            <h2>Lucid Motors — Prototypes and Concepts Systems Engineer</h2>
+  <section class="section">
+    <div class="wrap">
+      <div class="contact-block simple rise">
+        <div class="btns">
+            <a class="btn primary" href="mailto:ljhlucidshowcars@gmail.com">Say hello</a>
+            <a class="btn icon" href="https://linkedin.com/in/lhsiung" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a class="btn" href="Lawrence_Hsiung_Resume.pdf">Résumé</a>
           </div>
-          <div class="company-gallery">
-            <div class="company-image" data-label="Lucid Cosmos & Earth Concept">
-              <img src="images/cosmosint.avif" alt="Lucid Cosmos & Earth Concept" />
-            </div>
-            <div class="company-image" data-label="Lunar Robotaxi Concept">
-              <img src="images/lucidlunar.png" alt="Lucid Lunar Concept" />
-            </div>
-            <div class="company-image" data-label="Lucid Gravity x Uber x Nuro Robotaxi Concept">
-              <img
-                src="images/ubergravity.avif"
-                alt="Lucid Gravity x Uber x Nuro Robotaxi Concept"
-              />
-            </div>
-          </div>
-        </article>
+      </div>
+    </div>
+  </section>
+</main>
 
-        <article class="company">
-          <div class="company-header">
-            <img
-              src="images/farmwise.png"
-              alt="Farmwise Labs logo"
-              class="company-logo"
-            />
-            <h2>Farmwise Labs — Product & Systems Engineer</h2>
-          </div>
-          <div class="company-gallery">
-            <div class="company-image" data-label="Vulcan Smart Weeding Robot">
-              <img src="images/farmwisevulcan.jpg" alt="Farmwise Vulcan" />
-            </div>
-            <div class="company-image" data-label="IPS Box">
-              <img src="images/ipsbox.png" alt="Farmwise IPS Box" />
-            </div>
-          </div>
-        </article>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Lawrence Hsiung</span>
+    <span class="mark" aria-hidden="true"><i class="circle bg-coral"></i><i class="bg-sky"></i><i class="tri bg-butter"></i></span>
+  </div>
+</footer>
 
-        <article class="company">
-          <div class="company-header">
-            <img
-              src="images/zlogo.png"
-              alt="Zoom logo"
-              class="company-logo"
-            />
-            <h2>Zoom — Audio Test Engineer</h2>
-          </div>
-          <div class="company-gallery">
-            <div class="company-image" data-label="Zoom Hardware Certification">
-              <img src="images/zcert3.webp" alt="Zoom Hardware Certification" />
-            </div>
-          </div>
-        </article>
+<dialog class="viewer" aria-label="Enlarged image">
+  <figure>
+    <img src="" alt="">
+    <figcaption><span class="cap"></span><button type="button" class="close">Close ✕</button></figcaption>
+  </figure>
+</dialog>
 
-        <article class="company">
-          <div class="company-header">
-            <img
-              src="images/fitbitlogowhite.png" 
-              alt="Fitbit logo"
-              class="company-logo"
-            />
-            <h2>Fitbit — Electrical Engineering Technician</h2>
-          </div>
-          <div class="company-gallery">
-            <div class="company-image" data-label="Fitbit Versa 1, 2, & 3 Validation Testing">
-              <img src="images/versa2.jpg" alt="Fitbit Device Testing" />
-            </div>
-            <div class="company-image" data-label="Fitbit Inspire HR & Inspire Validation Testing">
-              <img src="images/inspirehr.webp" alt="Fitbit Device Testing" />
-            </div>
-          </div>
-        </article>
-      </section>
-    </main>
+<script>
+// Light / dark toggle, remembered per visitor
+(function () {
+  const root = document.documentElement;
+  const btn = document.querySelector('.theme-toggle');
+  const isDark = () => root.dataset.theme
+    ? root.dataset.theme === 'dark'
+    : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const sync = () => btn && btn.setAttribute('aria-pressed', String(isDark()));
+  if (btn) {
+    btn.addEventListener('click', () => {
+      root.dataset.theme = isDark() ? 'light' : 'dark';
+      try { localStorage.setItem('lh-theme', root.dataset.theme); } catch (e) {}
+      sync();
+    });
+  }
+  sync();
+})();
 
-    <footer>© 2026 Lawrence Hsiung</footer>
+// Gentle reveal on scroll
+(function () {
+  const els = document.querySelectorAll('.rise');
+  if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in')); return; }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(e => io.observe(e));
+})();
 
-    <script>
-      document.querySelectorAll("a").forEach((link) => {
-        if (link.href.includes("index.html")) {
-          link.addEventListener("click", function (e) {
-            if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
-            e.preventDefault();
-
-            /* Force instant animation start */
-            void document.body.offsetWidth;
-
-            document.body.classList.add("page-exit-right");
-
-            setTimeout(() => {
-              window.location = this.href;
-            }, 550);
-          });
-        }
-      });
-    </script>
-  </body>
+// Lightbox for portfolio images
+(function () {
+  const dlg = document.querySelector('dialog.viewer');
+  if (!dlg) return;
+  const img = dlg.querySelector('img');
+  const cap = dlg.querySelector('.cap');
+  document.querySelectorAll('[data-view]').forEach(b => {
+    b.addEventListener('click', () => {
+      const src = b.querySelector('img');
+      img.src = src.src;
+      img.alt = src.alt;
+      cap.textContent = b.dataset.view;
+      dlg.showModal();
+    });
+  });
+  dlg.addEventListener('click', (e) => {
+    if (e.target === dlg || e.target.closest('.close')) dlg.close();
+  });
+})();
+</script>
+</body>
 </html>
