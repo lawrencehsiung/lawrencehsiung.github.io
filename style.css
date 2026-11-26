@@ -193,7 +193,7 @@ h1, h2, h3 { margin: 0; font-weight: 600; letter-spacing: -.02em; line-height: 1
 .two-col { display: grid; grid-template-columns: 1fr 1.5fr; gap: clamp(28px, 6vw, 80px); }
 .two-col h2 { font-size: clamp(2rem, 4.2vw, 3.2rem); }
 .two-col .shapes { display: flex; gap: 10px; margin-top: 28px; }
-.two-col .shapes i { width: 46px; height: 46px; display: block; }
+.two-col .shapes > i, .two-col .shapes > a.egg { width: 46px; height: 46px; display: block; }
 .prose p { margin: 0 0 1.1em; max-width: 60ch; }
 @media (max-width: 860px) { .two-col { grid-template-columns: 1fr; } }
 
@@ -454,3 +454,130 @@ dialog.viewer .close:hover { background: var(--butter); color: var(--on-pastel);
   opacity: 0; pointer-events: none; transition: opacity .15s, transform .15s;
 }
 .nav a[data-tip]:hover::after, .nav a[data-tip]:focus-visible::after { opacity: 1; transform: translate(-50%, 0); }
+
+/* Easter egg: hover the coral circle in About and it becomes a watch face */
+.egg { position: relative; cursor: pointer; outline: none; -webkit-tap-highlight-color: transparent; transition: transform .3s cubic-bezier(.3, 1.5, .5, 1); }
+.egg:hover, .egg:focus { transform: scale(1.12); }
+.egg .tick, .egg .hand, .egg .pin { position: absolute; opacity: 0; transition: opacity .25s ease; }
+.egg:hover :is(.tick, .hand, .pin), .egg:focus :is(.tick, .hand, .pin) { opacity: 1; }
+.egg .tick { width: 4px; height: 4px; border-radius: 50%; background: var(--on-pastel); }
+.egg .t12 { top: 4px; left: calc(50% - 2px); }
+.egg .t3 { right: 4px; top: calc(50% - 2px); }
+.egg .t6 { bottom: 4px; left: calc(50% - 2px); }
+.egg .t9 { left: 4px; top: calc(50% - 2px); }
+.egg .hand { left: 50%; bottom: 50%; border-radius: 2px; transform-origin: 50% 100%; transform: translateX(-50%) rotate(var(--a, 0deg)); background: var(--on-pastel); }
+.egg .h { width: 3px; height: 11px; }
+.egg .m { width: 2px; height: 16px; }
+.egg .s { width: 1px; height: 17px; background: #f6f1e7; }
+.egg .pin { left: calc(50% - 2.5px); top: calc(50% - 2.5px); width: 5px; height: 5px; border-radius: 50%; background: var(--on-pastel); }
+@media (prefers-reduced-motion: reduce) { .egg, .egg :is(.tick, .hand, .pin) { transition: none; } }
+
+/* ---------- The Watchbox (hidden page) ---------- */
+.watchbox-wrap { padding-block: 10px clamp(60px, 8vw, 110px); }
+.watchbox { position: relative; max-width: 900px; margin: 0 auto; padding: clamp(14px, 3vw, 28px) clamp(14px, 3vw, 28px) clamp(18px, 3vw, 30px); background: #dcdbe0; border-radius: 34px; box-shadow: 0 26px 50px rgba(35, 33, 43, .18); }
+.watchbox .clasp { position: absolute; bottom: -14px; left: 50%; width: 48px; height: 24px; margin-left: -24px; border-radius: 4px 4px 12px 12px; background: linear-gradient(180deg, #f4f5f7 0%, #b9bcc3 45%, #e6e7eb 70%, #9fa3ab 100%); box-shadow: inset 0 0 0 1px rgba(35, 33, 43, .18), 0 2px 4px rgba(35, 33, 43, .2); }
+.watchbox .lining { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(10px, 2vw, 18px); padding: clamp(12px, 2.4vw, 22px); border-radius: 22px; background: #2b2833; box-shadow: inset 0 8px 22px rgba(0, 0, 0, .5); overflow: hidden; }
+.watchbox .lining::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(118deg, rgba(255, 255, 255, .09) 0 26%, transparent 26% 52%, rgba(255, 255, 255, .05) 52% 58%, transparent 58%); }
+.slot { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 14px 10px 14px; border-radius: 15px; background: #221f29; box-shadow: inset 0 4px 12px rgba(0, 0, 0, .55); }
+.slot .pillow { position: relative; width: 100%; max-width: 180px; aspect-ratio: 1; display: grid; place-items: center; }
+.slot .pillow::before { content: ""; position: absolute; left: 6%; right: 6%; top: 24%; bottom: 24%; border-radius: 999px; background: linear-gradient(#4b4657, #342f3e); box-shadow: 0 8px 14px rgba(0, 0, 0, .45), inset 0 2px 0 rgba(255, 255, 255, .08); }
+.slot .strap { position: absolute; top: 3%; bottom: 3%; left: 50%; width: 30%; transform: translateX(-50%); border-radius: 12px; background: var(--c); box-shadow: inset 0 0 0 2px rgba(35, 33, 43, .12); }
+.slot .face { position: relative; width: 58%; aspect-ratio: 1; border-radius: 50%; background: #f6f1e7; border: 6px solid var(--c); box-shadow: 0 8px 16px rgba(0, 0, 0, .4); }
+.slot .face .tick, .slot .face .hand, .slot .face .pin { position: absolute; }
+.slot .face .tick { width: 6%; aspect-ratio: 1; border-radius: 50%; background: #23212b; }
+.slot .face .t12 { top: 7%; left: 47%; }
+.slot .face .t3 { right: 7%; top: 47%; }
+.slot .face .t6 { bottom: 7%; left: 47%; }
+.slot .face .t9 { left: 7%; top: 47%; }
+.slot .face .hand { left: 50%; bottom: 50%; border-radius: 3px; transform-origin: 50% 100%; transform: translateX(-50%) rotate(var(--a, 0deg)); background: #23212b; }
+.slot .face .h { width: 4px; height: 24%; }
+.slot .face .m { width: 3px; height: 34%; }
+.slot .face .s { width: 1.5px; height: 38%; background: #e0806a; }
+.slot .face .pin { left: calc(50% - 4px); top: calc(50% - 4px); width: 8px; height: 8px; border-radius: 50%; background: #23212b; }
+.slot .pillow img { position: relative; width: 88%; height: 88%; object-fit: contain; filter: drop-shadow(0 8px 14px rgba(0, 0, 0, .45)); }
+.slot figcaption { color: #cfc8db; font-size: .85rem; text-align: center; line-height: 1.35; }
+.slot figcaption span { display: block; color: #8f889c; font-size: .75rem; }
+@media (max-width: 640px) { .watchbox .lining { grid-template-columns: repeat(2, 1fr); } .slot .face { border-width: 4px; } }
+
+/* Watch 1: KUOE Kyoto, green sunburst, small seconds, tan leather */
+.slot.kuoe .strap { width: 34%; border-radius: 9px; background: linear-gradient(90deg, #121214, #232326 30%, #2c2c30 50%, #1f1f22 75%, #111113); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .06); }
+.slot.kuoe .strap::after { content: ""; position: absolute; inset: 5px 4px; border: 1.5px dashed #050506; border-radius: 6px; }
+.slot.kuoe .face { container-type: inline-size; border: 0; overflow: hidden;
+  background:
+    repeating-conic-gradient(rgba(255, 255, 255, .035) 0 1.5deg, transparent 1.5deg 3deg),
+    conic-gradient(from 20deg, rgba(90, 240, 150, .3), transparent 14%, rgba(0, 0, 0, .4) 32%, transparent 46%, rgba(90, 240, 150, .26) 56%, transparent 68%, rgba(0, 0, 0, .45) 84%, rgba(90, 240, 150, .3)),
+    radial-gradient(circle, #14844a 0%, #0a5530 45%, #04291a 80%, #021209 100%);
+  box-shadow: 0 0 0 3px #c4c9cf, 0 0 0 5px #f2f4f6, 0 0 0 7px #8c939b, 0 0 0 8px #5f666e, 0 10px 18px 8px rgba(0, 0, 0, .45); }
+.slot.kuoe .face .tick { display: none; }
+.slot.kuoe .face .rail, .slot.kuoe .face .idx { position: absolute; inset: 0; border-radius: 50%; }
+.slot.kuoe .face .rail { background: repeating-conic-gradient(rgba(240, 236, 220, .75) 0 .9deg, transparent .9deg 6deg); -webkit-mask: radial-gradient(circle, transparent 89%, #000 89.5% 91.5%, transparent 92%); mask: radial-gradient(circle, transparent 89%, #000 89.5% 91.5%, transparent 92%); transform: rotate(-.45deg); }
+.slot.kuoe .face .idx { background: repeating-conic-gradient(#f0d595 0 2.8deg, #a5803e 2.8deg 4deg, transparent 4deg 30deg); -webkit-mask: radial-gradient(circle, transparent 58%, #000 58.5% 84%, transparent 84.5%); mask: radial-gradient(circle, transparent 58%, #000 58.5% 84%, transparent 84.5%); transform: rotate(-2deg); }
+.slot.kuoe .face .sub { position: absolute; left: 35%; top: 56%; width: 30%; height: 30%; border-radius: 50%; border: 1px solid rgba(235, 230, 210, .55);
+  background: repeating-conic-gradient(rgba(255, 255, 255, .05) 0 3deg, transparent 3deg 6deg), conic-gradient(from 200deg, rgba(120, 255, 170, .35), transparent 30%, rgba(0, 0, 0, .3) 60%, rgba(120, 255, 170, .3)), #0d5530; }
+.slot.kuoe .face .sub::before { content: ""; position: absolute; inset: 6%; border-radius: 50%; background: repeating-conic-gradient(rgba(240, 236, 220, .7) 0 2deg, transparent 2deg 30deg); -webkit-mask: radial-gradient(circle, transparent 80%, #000 81%); mask: radial-gradient(circle, transparent 80%, #000 81%); transform: rotate(-1deg); }
+.slot.kuoe .face .logo { position: absolute; left: 50%; top: 31%; transform: translate(-50%, -50%); text-align: center; color: #f3efe2; font-family: "Times New Roman", Georgia, serif; font-size: 7.5cqw; line-height: 1.05; letter-spacing: .04em; white-space: nowrap; }
+.slot.kuoe .face .logo small { display: block; font-size: 4.4cqw; letter-spacing: .14em; }
+.slot.kuoe .face .hand { background: linear-gradient(90deg, #a5803e, #f0d595 50%, #a5803e); box-shadow: 0 1px 2px rgba(0, 0, 0, .5); }
+.slot.kuoe .face .h { width: 3.5%; height: 27%; }
+.slot.kuoe .face .m { width: 2.6%; height: 40%; }
+.slot.kuoe .face .sub .s { width: 1.5px; height: 44%; background: #e8c983; }
+.slot.kuoe .face .pin { width: 7%; height: 7%; left: 46.5%; top: 46.5%; background: radial-gradient(circle at 35% 35%, #f6e2ad, #a5803e); }
+.slot.kuoe .face .sub .spin { position: absolute; left: 42%; top: 42%; width: 16%; height: 16%; border-radius: 50%; background: #e8c983; }
+
+/* KUOE case: steel lugs + crown behind the dial */
+.slot.kuoe .case { position: absolute; left: 13.9%; top: 5%; width: 72%; height: 90%; filter: drop-shadow(0 8px 10px rgba(0, 0, 0, .45)); }
+.slot.kuoe .strap { width: 25%; }
+.slot.kuoe .face { width: 46%; box-shadow: 0 0 0 2px #c4c9cf, 0 0 0 3.5px #f4f6f7, 0 0 0 4.5px #8c939b, 0 2px 6px 4px rgba(0, 0, 0, .3); }
+
+/* Watch 2: Swatch, frosted aqua see-through */
+.slot.swatch .strap { width: 33%; border-radius: 12px; overflow: hidden;
+  background:
+    linear-gradient(128deg, transparent 18%, rgba(255, 255, 255, .38) 18% 34%, transparent 34% 60%, rgba(255, 255, 255, .25) 60% 70%, transparent 70%),
+    linear-gradient(52deg, transparent 40%, rgba(60, 150, 150, .2) 40% 52%, transparent 52% 80%, rgba(60, 150, 150, .16) 80%),
+    #9adbd6; box-shadow: none; }
+.slot.swatch .strap .route { position: absolute; left: 0; width: 100%; height: 24%; }
+.slot.swatch .strap .route.top { top: 0; }
+.slot.swatch .strap .route.bot { bottom: 0; transform: scaleX(-1); }
+.slot.swatch .case { position: absolute; left: 13.9%; top: 5%; width: 72%; height: 90%; filter: drop-shadow(0 6px 10px rgba(0, 0, 0, .35)); }
+.slot.swatch .face { width: 51%; border: 0; overflow: hidden; container-type: inline-size;
+  background: repeating-linear-gradient(0deg, rgba(50, 140, 140, .1) 0 1px, transparent 1px 3px), radial-gradient(circle at 50% 45%, #a8e2de, #8fd3cf 70%, #7cc6c2);
+  box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .75), inset 0 0 5px 2px rgba(255, 255, 255, .35), 0 0 0 1.5px rgba(150, 205, 205, .7), 0 0 0 3px rgba(232, 246, 246, .8); }
+.slot.swatch .face .tick, .slot.swatch .face .s { display: none; }
+.slot.swatch .face .hand { background: #e3262a; z-index: 1; }
+.slot.swatch .face .h { width: 3.6%; height: 30%; }
+.slot.swatch .face .m { width: 2.8%; height: 44%; }
+.slot.swatch .face .pin { width: 12%; height: 12%; left: 44%; top: 44%; background: radial-gradient(circle, rgba(240, 80, 70, .95) 30%, rgba(240, 90, 80, 0) 70%); z-index: 1; }
+.slot.swatch .face .shards { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; }
+.slot.swatch .face .brand { display: flex; flex-direction: column; align-items: center; position: absolute; top: 24%; left: 50%; transform: translateX(-50%); z-index: 1; text-align: center; color: #3f9e9b; font-family: var(--sans); font-size: 8.5cqw; font-weight: 600; line-height: .95; letter-spacing: -.01em; }
+.slot.swatch .face .brand small { display: block; font-size: 4cqw; letter-spacing: .16em; font-weight: 500; }
+
+/* Watch 4: Hamilton Ventura, triangular shield case */
+.slot.ventura .strap { left: 45.2%; width: 31.3%; top: 0; bottom: 0; border-radius: 10px; box-shadow: inset 4px 0 6px rgba(0, 0, 0, .6), inset -4px 0 6px rgba(0, 0, 0, .6); background: repeating-linear-gradient(90deg, transparent 0 13px, rgba(0, 0, 0, .55) 13px 14px), repeating-linear-gradient(0deg, #1b1b1e 0 15px, #070708 15px 16px), #141416; }
+.slot.ventura .face { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0; background: none; box-shadow: none; overflow: visible; filter: drop-shadow(0 8px 10px rgba(0, 0, 0, .45)); }
+.slot.ventura .face .hand { position: static; background: none; border-radius: 0; transform-box: view-box; transform-origin: 735px 733px; transform: rotate(var(--a, 0deg)); }
+
+/* Watch 6: Raketa Copernicus */
+.slot.raketa .strap { width: 25%; top: 0; bottom: 0; border-radius: 10px; background: radial-gradient(ellipse at 40% 18%, rgba(255, 235, 210, .18), transparent 60%), linear-gradient(90deg, #7a4a2a, #a06a40 28%, #b27a4c 50%, #9c663d 74%, #77482a); box-shadow: inset 0 0 0 1px rgba(60, 30, 10, .35); }
+.slot.raketa .strap::after { content: ""; position: absolute; inset: 0 6px; border-left: 1.5px dashed #f3ece2; border-right: 1.5px dashed #f3ece2; }
+.slot.raketa .face { position: absolute; inset: auto; left: 15.4%; top: 15.4%; width: 69.2%; height: 69.2%; border: 0; border-radius: 0; background: none; box-shadow: none; overflow: visible; filter: drop-shadow(0 8px 10px rgba(0, 0, 0, .5)); }
+.slot.raketa .face .hand { position: static; background: none; border-radius: 0; transform-box: view-box; transform-origin: 50px 50px; transform: rotate(var(--a, 0deg)); }
+
+/* Watch 5: Citizen, mottled blue dial */
+.slot.citizen .strap { left: 49.4%; width: 26.5%; top: 0; bottom: 0; border-radius: 10px; border: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, .06), transparent 60%), repeating-linear-gradient(90deg, transparent 0 3px, rgba(0, 0, 0, .06) 3px 4px), linear-gradient(90deg, #13283a, #1f4058 30%, #24486a 50%, #1c3c55 75%, #122638);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .3); }
+.slot.citizen .strap::after { content: ""; position: absolute; inset: 0 7px; border-left: 1.5px dashed #0d1f2e; border-right: 1.5px dashed #0d1f2e; }
+.slot.citizen .face { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0; background: none; box-shadow: none; overflow: visible; filter: drop-shadow(0 8px 10px rgba(0, 0, 0, .45)); }
+.slot.citizen .face .hand { position: static; background: none; border-radius: 0; transform-box: view-box; transform-origin: 444.0px 449.0px; transform: rotate(var(--a, 0deg)); }
+
+/* Watch 3: Grand Seiko Spring Drive */
+.slot.gs .strap { left: 50.0%; width: 27.8%; top: 0; bottom: 0; border-radius: 6px;
+  background:
+    repeating-linear-gradient(180deg, transparent 0 33px, rgba(40, 46, 54, .55) 33px 35px, rgba(255, 255, 255, .7) 35px 36px) 50% 0 / 38% 100% no-repeat,
+    linear-gradient(90deg, #8f969e, #f4f6f8 18%, #dfe3e7 45%, #ffffff 60%, #cfd4d9 85%, #8f969e) 50% 0 / 38% 100% no-repeat,
+    repeating-linear-gradient(180deg, transparent 0 16px, rgba(40, 46, 54, .45) 16px 18px, rgba(255, 255, 255, .45) 18px 19px, transparent 19px 36px),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, .12) 0 1px, transparent 1px 3px),
+    linear-gradient(90deg, #a3aab2, #cdd2d7 15%, #bfc5cb 30%, #bfc5cb 70%, #cdd2d7 85%, #a3aab2);
+  box-shadow: inset 0 0 0 1px rgba(60, 66, 74, .35), 0 4px 10px rgba(0, 0, 0, .35); }
+.slot.gs .face { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0; background: none; box-shadow: none; overflow: visible; filter: drop-shadow(0 8px 10px rgba(0, 0, 0, .45)); }
+.slot.gs .face .hand { position: static; background: none; border-radius: 0; transform-box: view-box; transform-origin: 1171.0px 1171.0px; transform: rotate(var(--a, 0deg)); }

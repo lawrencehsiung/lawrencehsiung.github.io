@@ -43,11 +43,11 @@
     <div class="wrap two-col">
       <div>
         <p class="label sq">About</p>
-        <div class="shapes" aria-hidden="true"><i class="circle bg-coral"></i><i class="bg-butter"></i><i class="half-top bg-sky"></i><i class="tri bg-sage"></i></div>
+        <div class="shapes"><a class="circle bg-coral egg" href="watchbox.html" aria-label="The Watchbox"><span class="tick t12"></span><span class="tick t3"></span><span class="tick t6"></span><span class="tick t9"></span><span class="hand h"></span><span class="hand m"></span><span class="hand s"></span><span class="pin"></span></a><i class="bg-butter" aria-hidden="true"></i><i class="half-top bg-sky" aria-hidden="true"></i><i class="tri bg-sage" aria-hidden="true"></i></div>
       </div>
       <div class="prose rise">
         <p>I love building things that solve problems and tell stories. My favorite past projects include architecting the electrical systems for the Lucid Cosmos and Earth and testing hardware for the Farmwise Vulcan weeding robot.</p>
-        <p>I'm a big coffee enjoyer, occasional gamer, and dabbler in many hobbies.</p>
+        <p>I'm a big coffee enjoyer, occasional gamer, and watch collector. I also dabble in too many hobbies (film photography, piano, PC building, golf, car stuff, MapleStory, etc.).</p>
         <div class="edu">
           <div><i class="circle bg-coral" aria-hidden="true"></i><span class="yr">2021</span>San José State University<span class="d">M.S. Electrical Engineering, focused on machine learning &amp; power systems</span></div>
           <div><i class="bg-sky" aria-hidden="true"></i><span class="yr">2018</span>UC San Diego<span class="d">B.S. Electrical Engineering, minor in Business Studies</span></div>
@@ -116,6 +116,22 @@
     });
   }, { threshold: 0.12 });
   els.forEach(e => io.observe(e));
+})();
+
+// Easter egg: live time on the little watch
+(function () {
+  const w = document.querySelector('.egg');
+  if (!w) return;
+  const [h, m, s] = ['.h', '.m', '.s'].map(q => w.querySelector(q));
+  const tick = () => {
+    const d = new Date();
+    const sec = d.getSeconds(), min = d.getMinutes() + sec / 60, hr = (d.getHours() % 12) + min / 60;
+    s.style.setProperty('--a', sec * 6 + 'deg');
+    m.style.setProperty('--a', min * 6 + 'deg');
+    h.style.setProperty('--a', hr * 30 + 'deg');
+  };
+  tick();
+  setInterval(tick, 1000);
 })();
 
 // Lightbox for portfolio images
